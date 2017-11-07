@@ -1,6 +1,6 @@
-package DataStructures;
+package DataStructures.StackAndQueue;
 
-public class App {
+public class AppStack {
 
     public static void main(String[] args) throws Exception {
         Stack stack = new Stack(10);
