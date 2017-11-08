@@ -10,19 +10,19 @@ public class LinkedListNode {
     }
 }
 
-public class LinkedList {
+class LinkedList {
     LinkedListNode head;
 
     public void append(int data) {
         if (head == null) {
-            head = new Node(data);
+            head = new LinkedListNode(data);
             return;
         }
         LinkedListNode current = head;
         while (current.next != null) {
             current = current.next;
         }
-        current.next = new Node(data);
+        current.next = new LinkedListNode(data);
     }
 
     public void prepend(int data) {

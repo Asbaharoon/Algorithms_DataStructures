@@ -35,4 +35,14 @@ public class SinglyLinkedList {
         }
         System.out.println();
     }
+
+    public void insertLast(int data) {
+        Node current = first;
+        while (current.next != null) {
+            current = current.next; // Continue to loop until 'current.next' is null
+        }
+        Node newNode = new Node();
+        newNode.data = data;
+        current.next = newNode;
+    }
 }

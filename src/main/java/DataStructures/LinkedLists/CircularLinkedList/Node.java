@@ -1,4 +1,4 @@
-package DataStructures.LinkedLists.SinglyLinkedList;
+package DataStructures.LinkedLists.CircularLinkedList;
 
 public class Node {
 
