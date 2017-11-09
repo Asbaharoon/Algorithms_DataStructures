@@ -91,6 +91,51 @@ public class DoublyLinkedList {
         return true;
     }
 
+    // Assume a Non-Empty List
+    public Node deleteKey(int key) {
+        Node current = first;
+        while (current.data != key) {
+            current = current.next;
+            if (current == null) {
+                return null;
+            }
+        }
+
+        if (current == first) {
+            first = current.next; // As we are deleting the matching Key, first now points to current.next, as current is being deleted
+        } else {
+            current.previous.next = current.next;
+        }
+
+        if (current == last) {
+            last = current.previous; // when current is deleted, last now needs to point to current.previous
+        } else {
+            current.next.previous = current.previous;
+        }
+
+        return current;
+    }
+
+    public void displayForwards() {
+        System.out.println("List (First ---> Last): ");
+        Node current = first;
+        while (current != null) {
+            current.displayNode();
+            current = current.next; // Move onto the Next Node in the List
+        }
+        System.out.println();
+    }
+
+    public void displayBackwards() {
+        System.out.println("List (Last ---> First): ");
+        Node current = last;
+        while (current != null) {
+            current.displayNode();
+            current = current.previous;
+        }
+        System.out.println();
+    }
+
     public boolean isEmpty() {
         return first == null;
     }
