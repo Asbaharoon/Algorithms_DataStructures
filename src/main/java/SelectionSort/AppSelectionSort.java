@@ -3,7 +3,7 @@ package SelectionSort;
 public class AppSelectionSort {
 
     public static void main(String[] args) {
-        int[] myArray = selectionSort(new int[] {9,8,3,13,87,12,99});
+        int[] myArray = selectionSort(new int[] {9,8,7,6,5});
         for (int i = 0; i < myArray.length; i++) {
             System.out.println(myArray[i]);
         }
