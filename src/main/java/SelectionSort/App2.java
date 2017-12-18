@@ -17,7 +17,7 @@ public class App2 {
 
             swap(intArray, largest, lastUnsortedIndex);
         }
-        
+
         Arrays.stream(intArray).forEach(System.out::println);
     }
 
